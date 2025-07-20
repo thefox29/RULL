@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About RULL - Growtopia Social World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom font for a modern look */
+        body {
+            font-family: "Inter", sans-serif;
+            /* Flexbox for sticky footer */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+        main {
+            flex-grow: 1; /* Make main content take all available space */
+        }
+
+        /* Custom styles for the modal overlay background */
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md py-4 px-6">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">RULL</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-blue-600 transition duration-300 font-bold">About</a></li> <li><a href="donate.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Donate</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto my-12 p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-8 text-center">About RULL</h1>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Mission</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img
+                        src="images/mission.png"
+                        alt="RULL Mission"
+                        class="w-full h-auto rounded-lg shadow-md object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0c4ff/ffffff?text=Our+Mission';"
+                    >
+                </div>
+                <div class="md:w-1/2 text-lg text-gray-700">
+                    <p class="mb-4">
+                        At RULL, our mission is to cultivate a unique and authentic social haven within the vibrant world of Growtopia. We are dedicated to providing a serene, bot-free environment where players can genuinely connect, share experiences, and forge lasting friendships without the common distractions of spam or overcrowding.
+                    </p>
+                    <p>
+                        We believe that true community thrives on real human interaction, and RULL is built to be a testament to that belief. Our focus is on fostering a relaxed atmosphere where every conversation is meaningful and every player feels valued.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-12 border-gray-300">
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Story</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-1/2">
+                    <img
+                        src="images/story.png"
+                        alt="RULL Story"
+                        class="w-full h-auto rounded-lg shadow-md object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/90ee90/ffffff?text=Our+Story';"
+                    >
+                </div>
+                <div class="md:w-1/2 text-lg text-gray-700">
+                    <p class="mb-4">
+                        RULL was born out of a desire for a different kind of Growtopia social world. Frustrated by the prevalence of bots and spam in existing worlds, a group of dedicated players envisioned a space where the focus would return to what truly matters: human connection.
+                    </p>
+                    <p>
+                        From its humble beginnings, RULL has been meticulously designed and moderated to ensure it remains a peaceful sanctuary. Every decision, from its layout to its strict anti-bot policies, has been made with the goal of creating the ultimate chill and friendly environment for Growtopia enthusiasts.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-12 border-gray-300">
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <script>
+                    for (let i = 1; i <= 20; i++) {
+                        document.write(`
+                            <div class="relative overflow-hidden rounded-lg shadow-md group cursor-pointer" onclick="openModal('images/gallery${i}.png', 'RULL Gallery Image ${i}')">
+                                <img
+                                    src="images/gallery${i}.png"
+                                    alt="RULL Gallery Image ${i}"
+                                    class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x300/c7a7e8/ffffff?text=Image+${i}';"
+                                >
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p class="text-white text-lg font-semibold">View Image</p>
+                                </div>
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </section>
+        </main>
+
+    <footer class="bg-gray-800 text-white py-8 px-6 mt-12 rounded-t-lg">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 RULL Growtopia Social World. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="fixed inset-0 hidden flex items-center justify-center z-50 modal-overlay p-4" onclick="closeModal()">
+        <div class="relative max-w-4xl max-h-full mx-auto" onclick="event.stopPropagation()">
+            <button class="absolute top-2 right-2 text-white text-3xl font-bold focus:outline-none" onclick="closeModal()">
+                &times;
+            </button>
+            <img id="modalImage" src="" alt="Enlarged Image" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-xl">
+        </div>
+    </div>
+    <script>
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+
+        function openModal(imageSrc, imageAlt) {
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            imageModal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            imageModal.classList.add('hidden');
+            modalImage.src = ''; // Clear image to save memory
+        }
+    </script>
+
+</body>
+</html>

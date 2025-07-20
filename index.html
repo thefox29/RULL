@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to RULL - Growtopia Social World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom font for a modern look */
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        /* CSS for the shining effect */
+        .shine-button {
+            position: relative;
+            overflow: hidden;
+            z-index: 1; /* Ensure the shine is above the button background */
+        }
+
+        .shine-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%; /* Start off-screen to the left */
+            width: 50%; /* Width of the shining streak */
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-25deg); /* Optional: Adds a slanted look to the shine */
+            animation: shine 2s infinite forwards; /* Animation name, duration, loop, and fill-mode */
+            animation-delay: 2s; /* Optional: Delay before first shine */
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 150%; /* End far enough off-screen to the right */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md py-4 px-6">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">RULL</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300 font-bold">Home</a></li> <li><a href="about.html" class="text-gray-700 hover:text-blue-600 transition duration-300">About</a></li>
+                <li><a href="donate.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Donate</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden rounded-b-lg shadow-lg">
+        <img
+            src="images/RULL.jpg"
+            alt="RULL Growtopia Social World Banner"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            onerror="this.onerror=null;this.src='https://placehold.co/1200x600/cccccc/333333?text=RULL+Banner+Image+Unavailable';"
+        >
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+            <div class="text-center text-white max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+                    Welcome to RULL – A Unique Social Experience in Growtopia
+                </h1>
+                <p class="text-lg md:text-xl mb-8 drop-shadow-md">
+                    RULL is a carefully designed world created for players who seek a genuine and relaxed social environment.
+                    It’s a place where players can unwind, make new friends, and enjoy authentic conversations.
+                </p>
+                <a href="https://discord.gg/zVW6QRvJuA" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105 inline-block shine-button">
+                    <i class="fa-brands fa-discord mr-2"></i> Join RULL Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto my-12 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Discover What Makes RULL Special</h2>
+        <p class="text-lg text-gray-700 mb-8 text-center max-w-4xl mx-auto">
+            Unlike many other social worlds in Growtopia that are often dominated by bots or overcrowded with spam,
+            RULL focuses on real human interaction in a peaceful and chill atmosphere.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <h3 class="text-xl font-semibold mb-3 text-blue-600">No Bots Allowed</h3>
+                <p class="text-gray-700">Strictly moderated to ensure all interactions are human and meaningful.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <h3 class="text-xl font-semibold mb-3 text-blue-600">Chill Vibes</h3>
+                <p class="text-gray-700">A calm and welcoming layout designed for stress-free socializing.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <h3 class="text-xl font-semibold mb-3 text-blue-600">Real Connections</h3>
+                <p class="text-gray-700">Focused on genuine chats and community building.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <h3 class="text-xl font-semibold mb-3 text-blue-600">Spam-Free Zone</h3>
+                <p class="text-gray-700">Clean, bot-free experience unlike other noisy social worlds.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <h3 class="text-xl font-semibold mb-3 text-blue-600">Chat & Relax</h3>
+                <p class="text-gray-700">Perfect place to hang out and talk without distractions.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <h3 class="text-xl font-semibold mb-3 text-blue-600">Authentic Fun</h3>
+                <p class="text-gray-700">Join RULL today and discover what a true social world should feel like.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 px-6 mt-12 rounded-t-lg">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 RULL Growtopia Social World. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
